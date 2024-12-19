@@ -1,0 +1,30 @@
+<script setup lang="ts">
+import { ElMessage, ElMessageBox, ElNotification } from 'element-plus'
+import { createTextVNode } from 'vue'
+
+defineOptions({ name: 'AppProvider' })
+
+const ContextHolder = defineComponent({
+  name: 'ContextHolder',
+  setup() {
+    function register() {
+      window.$notification = ElNotification
+      window.$messageBox = ElMessageBox
+      window.$message = ElMessage
+    }
+
+    register()
+
+    return () => createTextVNode()
+  },
+})
+</script>
+
+<template>
+  <div class="h-full">
+    <ContextHolder />
+    <slot />
+  </div>
+</template>
+
+<style scoped></style>
