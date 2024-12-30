@@ -39,7 +39,6 @@ watch(
     <SimpleScrollbar>
       <ElMenu
         mode="vertical"
-        :ellipsis="false"
         :default-active="selectedKey"
         :collapse="appStore.siderCollapse"
         @select="val => routerPushByKeyWithMetaQuery(val as App.Global.RouteKey)"

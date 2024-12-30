@@ -114,7 +114,6 @@ watch(
           <SimpleScrollbar>
             <ElMenu
               mode="vertical"
-              :ellipsis="false"
               :default-active="selectedKey"
               @select="val => routerPushByKeyWithMetaQuery(val as App.Global.RouteKey)"
             >

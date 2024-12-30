@@ -52,8 +52,9 @@ watch(
 <template>
   <Teleport :to="`#${GLOBAL_HEADER_MENU_ID}`">
     <ElMenu
+      ellipsis
+      class="w-full"
       mode="horizontal"
-      :ellipsis="false"
       :default-active="activeFirstLevelMenuKey"
       @select="val => handleSelectMixMenu(val as App.Global.RouteKey)"
     >
@@ -64,7 +65,6 @@ watch(
     <SimpleScrollbar>
       <ElMenu
         mode="vertical"
-        :ellipsis="false"
         :default-active="selectedKey"
         :collapse="appStore.siderCollapse"
         @select="val => routerPushByKeyWithMetaQuery(val as App.Global.RouteKey)"
