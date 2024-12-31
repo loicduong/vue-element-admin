@@ -17,11 +17,11 @@ const hasChildren = item.children && item.children.length > 0
     <MenuItem v-for="child in item.children" :key="child.key" :item="child" :index="child.key" />
   </ElSubMenu>
   <ElMenuItem v-else>
-    <RouterLink :to="item.routeKey">
+    <RouterLink class="ib-ellipsis" :to="item.routeKey">
       <ElIcon>
         <component :is="item.icon" />
       </ElIcon>
-      <span class="ib-ellipsis">{{ item.label }}</span>
+      <span>{{ item.label }}</span>
     </RouterLink>
   </ElMenuItem>
 </template>
