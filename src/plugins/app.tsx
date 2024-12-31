@@ -48,7 +48,7 @@ export function setupAppVersionNotification() {
         return (
           <div>
             <p>{$t('system.updateContent')}</p>
-            <div style={{ display: 'flex', justifyContent: 'end', gap: '12px', width: '325px' }}>
+            <div style={{ display: 'flex', justifyContent: 'end', gap: '12px' }}>
               <ElButton onClick={() => n?.close()}>
                 {$t('system.updateCancel')}
               </ElButton>
