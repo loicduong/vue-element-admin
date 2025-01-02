@@ -17,7 +17,6 @@ export const include = [
   'html-to-image',
   'intro.js',
   'json-editor-vue',
-  'maplibre-gl',
   'pagedjs',
   'signature_pad',
   'simplebar-vue',
