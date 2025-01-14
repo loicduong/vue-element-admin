@@ -1,24 +1,12 @@
 <script setup lang="ts">
 import { $t } from '@/locales'
 import { useThemeStore } from '@/store/modules/theme'
-import Clipboard from 'clipboard'
 
 defineOptions({ name: 'ConfigOperation' })
 
 const themeStore = useThemeStore()
 
-const domRef = ref<HTMLElement | null>(null)
-
-function initClipboard() {
-  if (!domRef.value)
-    return
-
-  const clipboard = new Clipboard(domRef.value)
-
-  clipboard.on('success', () => {
-    window.$message?.success($t('theme.configOperation.copySuccessMsg'))
-  })
-}
+const { copy, isSupported } = useClipboard()
 
 function getClipboardText() {
   const reg = /"\w+":/g
@@ -38,21 +26,23 @@ function handleReset() {
 
 const dataClipboardText = computed(() => getClipboardText())
 
-onMounted(() => (initClipboard()))
+async function handleCopy() {
+  if (!isSupported) {
+    window.$message?.error('Your browser does not support the Clipboard API')
+    return
+  }
+  await copy(dataClipboardText.value)
+  window.$message?.success($t('theme.configOperation.copySuccessMsg'))
+}
 </script>
 
 <template>
   <div class="w-full flex justify-between">
-    <textarea
-      id="themeConfigCopyTarget"
-      v-model="dataClipboardText"
-      class="absolute opacity-0 -z-1"
-    />
     <ElButton type="danger" plain @click="handleReset">
       {{ $t('theme.configOperation.resetConfig') }}
     </ElButton>
-    <div ref="domRef" data-clipboard-target="#themeConfigCopyTarget">
-      <ElButton type="primary">
+    <div>
+      <ElButton type="primary" @click="handleCopy">
         {{ $t('theme.configOperation.copyConfig') }}
       </ElButton>
     </div>
