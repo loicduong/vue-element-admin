@@ -41,11 +41,9 @@ async function handleCopy() {
     <ElButton type="danger" plain @click="handleReset">
       {{ $t('theme.configOperation.resetConfig') }}
     </ElButton>
-    <div>
-      <ElButton type="primary" @click="handleCopy">
-        {{ $t('theme.configOperation.copyConfig') }}
-      </ElButton>
-    </div>
+    <ElButton type="primary" @click="handleCopy">
+      {{ $t('theme.configOperation.copyConfig') }}
+    </ElButton>
   </div>
 </template>
 
