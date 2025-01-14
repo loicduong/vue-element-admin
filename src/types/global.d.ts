@@ -2,8 +2,6 @@ export {}
 
 declare global {
   export interface Window {
-    /** NProgress instance */
-    NProgress?: import('nprogress').NProgress
     /** MessageBox instance */
     $messageBox?: import('element-plus').IElMessageBox
     /** Message instance */
