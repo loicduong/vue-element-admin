@@ -2,7 +2,7 @@
   "name": "vue-element-admin",
   "type": "module",
   "version": "0.0.1",
-  "description": "A fresh and elegant admin template, based on Vue3, Vite6, TypeScript, ElementPlus and UnoCSS.",
+  "description": "A fresh and elegant admin template, based on Vue 3, Vite 6, TypeScript, Element Plus and UnoCSS.",
   "author": {
     "name": "Loic Duong",
     "email": "dploc96@gmail.com",
