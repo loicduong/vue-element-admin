@@ -2,9 +2,6 @@ import type { App } from 'vue'
 import { $t } from '@/locales'
 import { ElButton } from 'element-plus'
 
-// Update check interval in milliseconds
-const UPDATE_CHECK_INTERVAL = 3 * 60 * 1000
-
 export function setupAppErrorHandle(app: App) {
   app.config.errorHandler = (err, vm, info) => {
     console.error(err, vm, info)
@@ -12,7 +9,11 @@ export function setupAppErrorHandle(app: App) {
 }
 
 export function setupAppVersionNotification() {
+  // Update check interval in milliseconds
+  const UPDATE_CHECK_INTERVAL = 3 * 60 * 1000
+
   const canAutoUpdateApp = import.meta.env.VITE_AUTOMATICALLY_DETECT_UPDATE === 'Y'
+    && import.meta.env.PROD
 
   if (!canAutoUpdateApp) {
     return
@@ -21,13 +22,8 @@ export function setupAppVersionNotification() {
   let isShow = false
   let updateInterval: ReturnType<typeof setInterval> | undefined
 
-  // Check if updates should be checked
-  function shouldCheckForUpdates() {
-    return [!isShow, document.visibilityState === 'visible', !import.meta.env.DEV].every(Boolean)
-  }
-
   async function checkForUpdates() {
-    if (!shouldCheckForUpdates()) {
+    if (isShow) {
       return
     }
 
@@ -48,7 +44,11 @@ export function setupAppVersionNotification() {
           <div>
             <p>{$t('system.updateContent')}</p>
             <div style={{ display: 'flex', justifyContent: 'end', gap: '12px' }}>
-              <ElButton onClick={() => n?.close()}>
+              <ElButton onClick={() => {
+                n?.close()
+                isShow = false
+              }}
+              >
                 {$t('system.updateCancel')}
               </ElButton>
               <ElButton type="primary" onClick={() => location.reload()}>
@@ -68,7 +68,7 @@ export function setupAppVersionNotification() {
     updateInterval = setInterval(checkForUpdates, UPDATE_CHECK_INTERVAL)
   }
   // If updates should be checked, set up the visibility change listener and start the update interval
-  if (shouldCheckForUpdates()) {
+  if (!isShow && document.visibilityState === 'visible') {
     // Check for updates when the document is visible
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') {
