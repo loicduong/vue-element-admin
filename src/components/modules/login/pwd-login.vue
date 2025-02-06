@@ -126,6 +126,7 @@ async function handleAccountLogin(account: Account) {
         <ElButton
           v-for="item in accounts"
           :key="item.key"
+          :loading="authStore.loginLoading"
           size="default"
           type="primary"
           @click="handleAccountLogin(item)"
