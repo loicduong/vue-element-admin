@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Mode } from 'vanilla-jsoneditor'
 import JsonEditorVue from 'json-editor-vue'
 
 definePage({ meta: { icon: 'mdi:code-json' } })
@@ -18,7 +19,7 @@ interface JsonValue {
 
 interface JsonData {
   value: JsonValue | number | string | undefined
-  mode?: InstanceType<typeof JsonEditorVue>['mode']
+  mode?: Mode | undefined
   readOnly?: boolean
 }
 
@@ -37,7 +38,7 @@ const data = reactive<JsonData>({
       c: 'd',
     },
   },
-  mode: 'text' as InstanceType<typeof JsonEditorVue>['mode'],
+  mode: 'text' as JsonData['mode'],
   readOnly: false,
 })
 </script>
@@ -63,7 +64,7 @@ const data = reactive<JsonData>({
         <ElButton @click="data.value = undefined">
           Clear
         </ElButton>
-        <ElButton @click="data.mode = data.mode === 'text' ? 'tree' : 'text'">
+        <ElButton @click="data.mode = (data.mode === 'text' ? 'tree' : 'text') as Mode">
           Toggle Mode
         </ElButton>
         <ElButton @click="data.readOnly = !data.readOnly">
