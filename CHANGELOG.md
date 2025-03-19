@@ -1,6 +1,73 @@
 # Changelog
 
 
+## [v0.1.1](https://github.com/loicduong/vue-element-admin/compare/v0.0.1...v0.1.1) (2025-03-19)
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- **projects**:
+  - update data cards bg on home &nbsp;-&nbsp; by **loicduong** [<samp>(76aac)</samp>](https://github.com/loicduong/vue-element-admin/commit/76aac8d)
+  - update charts color on home &nbsp;-&nbsp; by **loicduong** [<samp>(147ef)</samp>](https://github.com/loicduong/vue-element-admin/commit/147efb2)
+  - change loading bg by color mode &nbsp;-&nbsp; by **loicduong** [<samp>(a1ef6)</samp>](https://github.com/loicduong/vue-element-admin/commit/a1ef6bf)
+  - add pwa &nbsp;-&nbsp; by **locdp** [<samp>(72620)</samp>](https://github.com/loicduong/vue-element-admin/commit/7262056)
+  - support loading page dark mode adaptation &nbsp;-&nbsp; by @loicduong [<samp>(94b60)</samp>](https://github.com/loicduong/vue-element-admin/commit/94b6081)
+  - tab support touch event &nbsp;-&nbsp; by **loicduong** [<samp>(ba635)</samp>](https://github.com/loicduong/vue-element-admin/commit/ba635e7)
+  - support proxy log in terminal &nbsp;-&nbsp; by **loicduong** [<samp>(709f0)</samp>](https://github.com/loicduong/vue-element-admin/commit/709f045)
+- **utils**:
+  - support replaceTab &nbsp;-&nbsp; by **loicduong** [<samp>(5d662)</samp>](https://github.com/loicduong/vue-element-admin/commit/5d662d1)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- **projects**:
+  - fix ElementPlus in GlobalComponents &nbsp;-&nbsp; by **loicduong** [<samp>(f47cb)</samp>](https://github.com/loicduong/vue-element-admin/commit/f47cb51)
+  - show multi update notifications &nbsp;-&nbsp; by **loicduong** [<samp>(0985b)</samp>](https://github.com/loicduong/vue-element-admin/commit/0985bf1)
+  - fix update notifications &nbsp;-&nbsp; by @loicduong [<samp>(d8fa0)</samp>](https://github.com/loicduong/vue-element-admin/commit/d8fa068)
+  - hidden multi-language button in login page &nbsp;-&nbsp; by @loicduong [<samp>(38cbb)</samp>](https://github.com/loicduong/vue-element-admin/commit/38cbbb8)
+  - fix multiple calls to the login API when clicking quickly &nbsp;-&nbsp; by @loicduong [<samp>(03c25)</samp>](https://github.com/loicduong/vue-element-admin/commit/03c25f1)
+  - fix multiple calls to the login API when clicking quickly" &nbsp;-&nbsp; by @loicduong [<samp>(44003)</samp>](https://github.com/loicduong/vue-element-admin/commit/44003cb)
+  - fix active tab switch issue after removal &nbsp;-&nbsp; by **loicduong** [<samp>(5d2b2)</samp>](https://github.com/loicduong/vue-element-admin/commit/5d2b2c4)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **other**:
+  - update project name &nbsp;-&nbsp; by **loicduong** [<samp>(ae576)</samp>](https://github.com/loicduong/vue-element-admin/commit/ae57639)
+- **projects**:
+  - remove UI align type &nbsp;-&nbsp; by **loicduong** [<samp>(42ee1)</samp>](https://github.com/loicduong/vue-element-admin/commit/42ee168)
+  - remove nprogress &nbsp;-&nbsp; by **loicduong** [<samp>(350b6)</samp>](https://github.com/loicduong/vue-element-admin/commit/350b60c)
+  - remove clipboard &nbsp;-&nbsp; by **loicduong** [<samp>(dbdb2)</samp>](https://github.com/loicduong/vue-element-admin/commit/dbdb231)
+  - remove crypto-js &nbsp;-&nbsp; by **loicduong** [<samp>(9639f)</samp>](https://github.com/loicduong/vue-element-admin/commit/9639fed)
+  - remove ofetch package &nbsp;-&nbsp; by **loicduong** [<samp>(0562d)</samp>](https://github.com/loicduong/vue-element-admin/commit/0562d55)
+  - update config action btns layout &nbsp;-&nbsp; by **loicduong** [<samp>(42648)</samp>](https://github.com/loicduong/vue-element-admin/commit/42648d1)
+
+### &nbsp;&nbsp;&nbsp;📦 Build
+
+- **deps**: restrict the minimum Node.js version &nbsp;-&nbsp; by **loicduong** [<samp>(9d74b)</samp>](https://github.com/loicduong/vue-element-admin/commit/9d74b77)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- update deps &nbsp;-&nbsp; by **loicduong** [<samp>(87c29)</samp>](https://github.com/loicduong/vue-element-admin/commit/87c2926)
+- **deps**:
+  - update version &nbsp;-&nbsp; by **loicduong** [<samp>(9b646)</samp>](https://github.com/loicduong/vue-element-admin/commit/9b6462b)
+  - update deps &nbsp;-&nbsp; by @loicduong [<samp>(7ba91)</samp>](https://github.com/loicduong/vue-element-admin/commit/7ba91f6)
+  - update deps &nbsp;-&nbsp; by **loicduong** [<samp>(ee2f5)</samp>](https://github.com/loicduong/vue-element-admin/commit/ee2f521)
+- **other**:
+  - update env default &nbsp;-&nbsp; by **loicduong** [<samp>(adec6)</samp>](https://github.com/loicduong/vue-element-admin/commit/adec65a)
+  - update prd build prefix &nbsp;-&nbsp; by **loicduong** [<samp>(e4c83)</samp>](https://github.com/loicduong/vue-element-admin/commit/e4c83ce)
+  - update project desc &nbsp;-&nbsp; by **loicduong** [<samp>(f9af4)</samp>](https://github.com/loicduong/vue-element-admin/commit/f9af4c2)
+  - remove volta config &nbsp;-&nbsp; by **loicduong** [<samp>(9e5f3)</samp>](https://github.com/loicduong/vue-element-admin/commit/9e5f3ef)
+- **projects**:
+  - apply standard-readme &nbsp;-&nbsp; by **loicduong** [<samp>(cf0ed)</samp>](https://github.com/loicduong/vue-element-admin/commit/cf0ed8f)
+  - update contributing &nbsp;-&nbsp; by **loicduong** [<samp>(87fec)</samp>](https://github.com/loicduong/vue-element-admin/commit/87fecca)
+  - remove crypto package &nbsp;-&nbsp; by **loicduong** [<samp>(8163f)</samp>](https://github.com/loicduong/vue-element-admin/commit/8163fb8)
+  - add vite-plugin-vue-layout-next &nbsp;-&nbsp; by **loicduong** [<samp>(2e026)</samp>](https://github.com/loicduong/vue-element-admin/commit/2e02620)
+  - update unocss preset &nbsp;-&nbsp; by **loicduong** [<samp>(16220)</samp>](https://github.com/loicduong/vue-element-admin/commit/162208e)
+  - update vscode settings and launch &nbsp;-&nbsp; by **loicduong** [<samp>(3e3b5)</samp>](https://github.com/loicduong/vue-element-admin/commit/3e3b561)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![loicduong](https://github.com/loicduong.png?size=48)](https://github.com/loicduong)&nbsp;&nbsp;
+[loicduong](mailto:mikhailcolt@gmail.com),&nbsp;[locdp](mailto:locdp@suga.com.vn)
+
 ## [v0.1.0](https://github.com/loicduong/vue-element-admin/compare/v0.0.1...v0.1.0) (2025-02-06)
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
