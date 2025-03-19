@@ -195,6 +195,7 @@ const basicGanttOption: VTableGantt.GanttConstructorOptions = {
         lineColor: 'blue',
         lineDash: [8, 4],
       },
+      content: '',
     },
     {
       date: '2024-08-17',
@@ -203,6 +204,7 @@ const basicGanttOption: VTableGantt.GanttConstructorOptions = {
         lineColor: 'red',
         lineDash: [8, 4],
       },
+      content: '',
     },
   ],
   rowSeriesNumber: {
@@ -736,6 +738,7 @@ const customGanttOption: VTableGantt.GanttConstructorOptions = {
         lineColor: 'blue',
         lineDash: [8, 4],
       },
+      content: '',
     },
     {
       date: '2024-08-17',
@@ -744,6 +747,7 @@ const customGanttOption: VTableGantt.GanttConstructorOptions = {
         lineColor: 'red',
         lineDash: [8, 4],
       },
+      content: '',
     },
   ],
   scrollStyle: {
